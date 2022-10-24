@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { EditorRoutingModule } from './editor-routing.module';
 import { CanvasComponent } from './canvas/canvas.component';
-
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { CanvasComponent } from './canvas/canvas.component';
   ],
   imports: [
     CommonModule,
-    EditorRoutingModule
+    EditorRoutingModule,
+    ButtonModule
   ]
 })
 export class EditorModule { }
