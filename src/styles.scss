@@ -1,8 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~primeicons/primeicons.css";
-@import "~primeng/resources/themes/bootstrap4-dark-blue/theme.css";
+@import "~primeng/resources/themes/vela-blue/theme.css";
 @import "~primeng/resources/primeng.min.css";
-@import 'grapesjs/dist/css/grapes.min.css';
+// @import '~grapesjs/dist/css/grapes.min.css';
+
+$primaryColor: #444;
+$secondaryColor: #ddd;
+$tertiaryColor: #ff6f00;
+$quaternaryColor: #fa8c39;
+
+@import "~grapesjs/src/styles/scss/main.scss";
 
 :root {
     --primary-color: #ff6f00;
