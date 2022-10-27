@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import grapesjs from 'grapesjs';
+import { BOOTSTRAP_COMPONENT_BLOCKS } from '../../components/bootstrap/blocks';
 @Component({
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
@@ -19,7 +20,7 @@ export class CanvasComponent implements OnInit {
       // As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
       fromElement: true,
       // Size of the editor
-      height: '100vh',
+      height: 'calc(100vh - 40px)',
       width: 'auto',
       // Disable the storage manager for the moment
       storageManager: false,
@@ -95,32 +96,7 @@ export class CanvasComponent implements OnInit {
       },
       blockManager: {
         appendTo: '#blocks',
-        blocks: [
-          {
-            id: 'section', // id is mandatory
-            label: '<b>Section</b>', // You can use HTML/SVG inside labels
-            attributes: { class: 'gjs-block-section' },
-            content: `<section>
-              <h1>This is a simple title</h1>
-              <div>This is just a Lorem text: Lorem ipsum dolor sit amet</div>
-            </section>`,
-          }, {
-            id: 'text',
-            label: 'Text',
-            content: '<div data-gjs-type="text">Insert your text here</div>',
-          }, {
-            id: 'image',
-            label: 'Image',
-            // Select the component once it's dropped
-            select: true,
-            // You can pass components as a JSON instead of a simple HTML string,
-            // in this case we also use a defined component type `image`
-            content: { type: 'image' },
-            // This triggers `active` event on dropped components and the `image`
-            // reacts by opening the AssetManager
-            activate: true,
-          }
-        ]
+        blocks: BOOTSTRAP_COMPONENT_BLOCKS
       }, selectorManager: {
         appendTo: '.styles-container'
       },
@@ -174,7 +150,14 @@ export class CanvasComponent implements OnInit {
             }
           ]
         }]
-      }
+      },
+      canvas: {
+        styles: [
+          'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css',
+          'https://fonts.googleapis.com/icon?family=Material+Icons',
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap'
+        ]
+      },
     });
 
     this.canvasEditor.Panels.addPanel({
@@ -185,6 +168,12 @@ export class CanvasComponent implements OnInit {
       id: 'basic-actions',
       el: '.panel__basic-actions',
       buttons: [
+        {
+          id: 'home',
+          active: true, // active by default
+          className: 'btn-toggle-borders',
+          label: '<a href="https://www.buddhilive.com" target="_blank">H</a>',
+        }, 
         {
           id: 'visibility',
           active: true, // active by default
