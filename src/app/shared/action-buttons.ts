@@ -4,8 +4,7 @@ export const BASIC_ACTION_BUTTON = [
         active: true, // active by default
         className: 'btn-toggle-borders',
         label: `<span class="material-icons">home</span>`,
-    },
-    {
+    }, {
         id: 'visibility',
         active: true, // active by default
         className: 'btn-toggle-borders',
@@ -29,5 +28,10 @@ export const BASIC_ACTION_BUTTON = [
             </textarea>`)
                 .open();
         },
+    }, {
+        id: 'preview',
+        className: 'btn-open-preview',
+        label: `<span class="material-icons">visibility</span>`,
+        command: 'preview',
     }
 ];
