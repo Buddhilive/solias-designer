@@ -15,6 +15,11 @@ export const BOOTSTRAP_COMPONENT_BLOCKS = [
     content: '<a href="#">Link</a>',
     category: 'Basic'
   }, {
+    id: 'div',
+    label: `<span class="material-icons">dashboard</span><span class="block-label">Div</span>`,
+    content: '<div><div>',
+    category: 'Basic'
+  }, {
     id: 'row',
     label: `<span class="material-icons">table_rows</span><span class="block-label">Row</span>`,
     content: '<div class="row"></div>',
@@ -26,7 +31,7 @@ export const BOOTSTRAP_COMPONENT_BLOCKS = [
     category: 'Layout'
   }, {
     id: 'container',
-    label: `<span class="material-icons">web_assest</span><span class="block-label">Container</span>`,
+    label: `<span class="material-icons">crop_free</span><span class="block-label">Container</span>`,
     content: '<div class="container"></div>',
     category: 'Layout'
   }, {
@@ -76,7 +81,7 @@ export const BOOTSTRAP_COMPONENT_BLOCKS = [
     category: 'Forms'
   }, {
     id: 'navbar',
-    label: `<span class="material-icons">dashboard</span><span class="block-label">Navbar</span>`,
+    label: `<span class="material-icons">apps</span><span class="block-label">Navbar</span>`,
     content: `<nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -113,7 +118,12 @@ export const BOOTSTRAP_COMPONENT_BLOCKS = [
       </div>
     </div>
   </nav>`,
-    category: 'Forms'
+    category: 'Extra'
+  }, {
+    id: 'chips',
+    label: `<span class="material-icons">more</span><span class="block-label">Chips</span>`,
+    content: '<span class="badge text-bg-primary">Primary</span>',
+    category: 'Extra'
   }, {
     id: 'image',
     label: `<span class="material-icons">image</span><span class="block-label">Image</span>`,
